@@ -19,7 +19,7 @@ function CustomerForm({ onCustomerAdded }) {
       return;
     }
 
-    await fetch("http://localhost:5000/customers", {
+    await fetch("https://customer-dashboard-hsku.onrender.com/customers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

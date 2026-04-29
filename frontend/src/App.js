@@ -8,9 +8,8 @@ import CustomerTable from "./components/CustomerTable";
 function App() {
   const [customers, setCustomers] = useState([]);
 
-  const API = "http://localhost:5000/customers";
+  const API = "https://customer-dashboard-hsku.onrender.com/customers";
 
-  // Fetch customers
   const fetchCustomers = async () => {
     const res = await fetch(API);
     const data = await res.json();
