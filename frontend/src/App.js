@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./App.css";
-
 
 import Navbar from "./components/Navbar";
 import CustomerForm from "./components/CustomerForm";
@@ -9,19 +8,18 @@ import CustomerTable from "./components/CustomerTable";
 function App() {
   const [customers, setCustomers] = useState([]);
 
-  const API = process.env.REACT_APP_API_URL;  
+  const API = process.env.REACT_APP_API_URL;
 
-  const fetchCustomers = async () => {
+  const fetchCustomers = useCallback(async () => {
     const res = await fetch(API);
     const data = await res.json();
     setCustomers(data);
-  };
+  }, [API]);
 
   useEffect(() => {
     fetchCustomers();
-  }, []);
+  }, [fetchCustomers]);
 
-  // Delete customer
   const handleDelete = async (id) => {
     await fetch(`${API}/${id}`, {
       method: "DELETE"

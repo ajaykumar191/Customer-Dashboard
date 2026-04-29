@@ -18,8 +18,8 @@ function CustomerForm({ onCustomerAdded }) {
       alert("All fields are required");
       return;
     }
-
-    await fetch("https://customer-dashboard-hsku.onrender.com/customers", {
+    const API = process.env.REACT_APP_API_URL;  
+    await fetch(API, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
