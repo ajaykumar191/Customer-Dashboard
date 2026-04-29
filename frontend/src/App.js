@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
+
 import Navbar from "./components/Navbar";
 import CustomerForm from "./components/CustomerForm";
 import CustomerTable from "./components/CustomerTable";
@@ -8,7 +9,7 @@ import CustomerTable from "./components/CustomerTable";
 function App() {
   const [customers, setCustomers] = useState([]);
 
-  const API = "https://customer-dashboard-hsku.onrender.com/customers";
+  const API = process.env.REACT_APP_API_URL;  
 
   const fetchCustomers = async () => {
     const res = await fetch(API);
