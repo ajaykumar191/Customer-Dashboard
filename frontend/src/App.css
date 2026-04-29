@@ -1,0 +1,123 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 18px 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 80%;
+  margin: 30px auto;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+/* ===== FORM ===== */
+.form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form input:focus {
+  border-color: #2a5298;
+  box-shadow: 0 0 5px rgba(42, 82, 152, 0.3);
+}
+
+/* ===== BUTTON ===== */
+form button {
+  background: #2a5298;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #1e3c72;
+}
+
+/* ===== TABLE ===== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(90deg, #2a5298, #4facfe);
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody tr {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #f1f7ff;
+}
+
+/* ===== DELETE BUTTON ===== */
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #cc0000;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+}
